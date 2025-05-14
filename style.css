@@ -1,0 +1,114 @@
+/* Reset some basic styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Set body background and font */
+body {
+  font-family: 'Cinzel', serif; /* Using the Cinzel font */
+  background-color: #1a1a1a; /* Dark background */
+  color: #f2f2f2; /* Light text color */
+  line-height: 1.6;
+  text-align: center;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-image: url('https://www.transparenttextures.com/patterns/dark-mosaic.png'); /* Subtle background texture */
+  background-size: cover;
+}
+
+/* Container for the main content */
+.container {
+  background: rgba(0, 0, 0, 0.7); /* Semi-transparent background */
+  padding: 20px 40px;
+  border-radius: 10px;
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.6);
+  width: 100%;
+  max-width: 800px;
+}
+
+/* Style the title or header */
+h1 {
+  font-size: 3rem;
+  color: #d4af37; /* Gold color for D&D aesthetic */
+  text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.6); /* Glowing effect */
+  margin-bottom: 20px;
+}
+
+/* Form controls like select and button */
+select, button {
+  background-color: #333;
+  border: 1px solid #444;
+  color: #f2f2f2;
+  font-size: 1rem;
+  padding: 10px;
+  border-radius: 5px;
+  margin: 10px 0;
+  width: 100%;
+  max-width: 300px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.6);
+}
+
+select:focus, button:focus {
+  outline: none;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.6); /* Focus glow effect */
+}
+
+/* Hover effect for the button */
+button:hover {
+  background-color: #d4af37; /* Gold on hover */
+  color: #1a1a1a;
+  cursor: pointer;
+}
+
+/* Character output area */
+#characterOutput {
+  margin-top: 30px;
+  background-color: rgba(0, 0, 0, 0.8);
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.6);
+  width: 100%;
+  max-width: 500px;
+  color: #d4af37; /* Gold color */
+}
+
+/* Add some slight animation to the output */
+#characterOutput h2 {
+  font-size: 2rem;
+  margin-bottom: 15px;
+}
+
+#characterOutput p {
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+  color: #f2f2f2;
+}
+
+/* Add a dark border and padding for the select boxes */
+select, button {
+  border: 1px solid #888;
+  background-color: #222;
+  color: #f0f0f0;
+}
+
+/* Animations to make the page feel more dynamic */
+@keyframes glow {
+  0% {
+    text-shadow: 0 0 10px #f2f2f2, 0 0 20px #d4af37, 0 0 30px #d4af37;
+  }
+  50% {
+    text-shadow: 0 0 20px #f2f2f2, 0 0 30px #d4af37, 0 0 40px #d4af37;
+  }
+  100% {
+    text-shadow: 0 0 10px #f2f2f2, 0 0 20px #d4af37, 0 0 30px #d4af37;
+  }
+}
+
+h1, #characterOutput {
+  animation: glow 1.5s infinite alternate;
+}
