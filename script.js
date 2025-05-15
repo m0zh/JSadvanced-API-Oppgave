@@ -79,16 +79,17 @@ generateBtn.addEventListener("click", async () => {
         abilitiesOutput = "No spells or special abilities available.";
       }
 
-      spellsOutput = `<p>${abilitiesOutput}</p>`; // Viser abilities om det ikke er noen spells
+      spellsOutput = `<p>${abilitiesOutput}</p>`; // Viser abilities om det ikke er noen spells 
     }
 
     // Vis data i DOM
     characterOutput.innerHTML = `
       <h2>Character</h2>
-      <p>Race: ${raceDetails.name}</p>
+      <img src="images/${classDetails.name.toLowerCase()}.png" alt="${classDetails.name}" style="width: 200px;"> <!-- Legger til bilde utifra classens navn -->
       <p>Class: ${classDetails.name}</p>
+      <p>Race: ${raceDetails.name}</p>
       <p>Speed: ${raceDetails.speed}</p>
-      ${spellsOutput} <!-- This will be either spells or abilities -->
+      ${spellsOutput} <!-- Denne er enten spells eller abilities(Selv om det ikke virker som de har vanlige abilities(finner dem hvertfall ikke :P)) -->
     `;
   } catch (error) {
     console.error("Something went wrong when creating character:", error);
